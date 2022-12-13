@@ -1,4 +1,4 @@
-package com.assignment4.gabriel;
+package com.assignment4.group24;
 
 import java.util.Date;
 import java.util.UUID;
@@ -17,6 +17,6 @@ public class Connection {
 	}
 	
 	public String getName() {
-		return "\n=====\nTicket no " + this.id + "\nDeparting " + date + "\nFrom " + origin.getName() + " to " + this.dest.getName() + "\n=====\n";
+		return "\nDeparting " + date + "\nFrom " + origin.getName() + " to " + this.dest.getName() + "\n=====\n";
 	}
 }

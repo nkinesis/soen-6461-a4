@@ -1,4 +1,4 @@
-package com.assignment4.gabriel;
+package com.assignment4.group24;
 
 import java.util.UUID;
 

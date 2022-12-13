@@ -1,4 +1,4 @@
-package com.assignment4.gabriel;
+package com.assignment4.group24;
 
 import java.util.Date;
 import java.util.UUID;
@@ -12,6 +12,7 @@ public class Terminal {
 		this.name = name;
 	}
 	
+	// step 1 of the diagram
 	public void makeBooking(RailCompany company, Passenger pass, Date date, Terminal dest) {
 		System.out.println("make booking with " + company.getName());
 		company.issueBooking(pass, date, this, dest);
