@@ -9,6 +9,7 @@ public class Connection {
 	private String origin;
 	private String dest;
 	
+	// step 1.2 of the diagram
 	public Connection(Date date, String origin, String dest) {
 		this.id = UUID.randomUUID();
 		this.date = date;
