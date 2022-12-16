@@ -13,9 +13,11 @@ public class Terminal {
 	}
 	
 	// step 1 of the diagram
-	public void makeBooking(RailCompany company, Passenger pass, Date date, Terminal dest) {
-		System.out.println("make booking with " + company.getName());
-		company.issueBooking(pass, date, this, dest);
+	public Ticket makeBooking(Passenger passenger, Date date, String origin, String destination) {
+		Connection connection = Schedule.getConnection(date, origin, destination);
+		RailCompany company = new RailCompany("CanadaExample Rail Co.");
+		Ticket ticket = company.issueBooking(passenger, connection);
+		return ticket;
 	}
 	
 	public String getName() {

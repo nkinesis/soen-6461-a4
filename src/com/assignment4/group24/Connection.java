@@ -4,19 +4,31 @@ import java.util.Date;
 import java.util.UUID;
 
 public class Connection {
-	UUID id;
-	Date date;
-	Terminal origin;
-	Terminal dest;
+	private UUID id;
+	private Date date;
+	private String origin;
+	private String dest;
 	
-	public Connection(Date date, Terminal origin, Terminal dest) {
+	public Connection(Date date, String origin, String dest) {
 		this.id = UUID.randomUUID();
 		this.date = date;
 		this.origin = origin;
 		this.dest = dest;
 	}
 	
-	public String getName() {
-		return "\nDeparting " + date + "\nFrom " + origin.getName() + " to " + this.dest.getName() + "\n=====\n";
+	public String getID() {
+		return this.id.toString();
+	}
+	
+	public String getDate() {
+		return this.date.toString();
+	}
+	
+	public String getOrigin() {
+		return this.origin;
+	}
+	
+	public String getDestination() {
+		return this.dest;
 	}
 }

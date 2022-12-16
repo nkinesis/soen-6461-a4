@@ -4,34 +4,43 @@ import java.util.UUID;
 
 public class Booking {
 	UUID id;
-    Passenger pass;
+    Passenger passenger;
     Connection conn;
     Ticket ticket;
 
-    public Booking(Passenger pass) {
+    public Booking() {
     	this.id = UUID.randomUUID();
-        this.pass = pass;
     }
 
     public Boolean save() {
         // stub: persist on the database
+        System.out.println("Booking saved!");
         return true;
     }
 
-    public Boolean makeNewBooking(Connection conn) { 
+    // step 3 of the diagram
+    public Ticket makeNewBooking(Passenger passenger, Connection conn) { 
         this.conn = conn;
-        System.out.println("booking saved: " + conn.getName());
-        return this.save();
+        this.passenger = passenger;
+        return getTicket();
     }
 
-    // usually when you book a train trip, the ticket is not issued right away
     // the booking can exist without a ticket, but the ticket can't exist without a booking
     public Ticket getTicket() {
         if (this.ticket == null) {
-            this.ticket = new Ticket();
+            this.ticket = new Ticket(this);
         }
         this.save();
+        // if a ticket has already been issued, return it
         return this.ticket;
+    }
+    
+    public Passenger getPassenger() {
+        return this.passenger;
+    }
+    
+    public Connection getConnection() {
+        return this.conn;
     }
 
 }
