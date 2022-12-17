@@ -14,4 +14,4 @@ Create a UML communications diagram for method makeBooking(..). The diagram is i
 - Provide a Java implementation for method issueBooking(..).
 - Provide a Java implementation for method makeNewBooking(..). 
 
-This repo is actually an Eclipse project, so you can load it into Eclipse or just inspect the Java files inside the SRC folder.
+This repo is actually an Eclipse project, so you can load it into Eclipse or just inspect the Java files inside the SRC folder. The issueBooking method is on RailCompany.java. The makeNewBooking method is in Booking.java.
